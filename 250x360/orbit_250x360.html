@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta name="ad.size" content="width=250,height=360">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/easepack_2.0.1_min.js"></script>
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenlite_2.0.1_min.js"></script>
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/cssplugin_2.0.1_min.js"></script>
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/timelinemax_2.0.1_min.js"></script>
+  <script type="text/javascript">
+    var clickTag = "#"; 
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      TweenLite.ticker.useRAF(false);
+      TweenLite.lagSmoothing(0);
+      var tl = new TimelineMax({ repeat: 6, repeatDelay: 3});
+      tl.from("#schirm", 0.6, {autoAlpha: 1})
+        .from("#msg01", 0.2, {x: 300, opacity: 0}, '-=0.1')
+        .from("#msg02", 0.2, {x: 300, opacity: 0}, '+=0.7')
+        .from("#msg03", 0.2, {x: -300, opacity: 0}, '+=1.2')
+
+        
+        ;
+   });
+  </script>
+</head>
+<body>
+    <div class="container">
+      <div id="bottom" class="el">
+        <img src="bottom.png">
+      </div>
+      <div id="msg01" class="el">
+        <img src="msg01.png">
+      </div>
+      <div id="msg02" class="el">
+        <img src="msg02.png">
+      </div>
+      <div id="msg03" class="el">
+        <img src="msg03.png">
+      </div>
+      <div id="schirm"></div> 
+    </div>
+</body>
