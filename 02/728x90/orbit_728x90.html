@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta name="ad.size" content="width=728,height=90">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/easepack_2.0.1_min.js"></script>
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenlite_2.0.1_min.js"></script>
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/cssplugin_2.0.1_min.js"></script>
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/timelinemax_2.0.1_min.js"></script>
+  <script type="text/javascript">
+    var clickTag = "#"; 
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      TweenLite.ticker.useRAF(false);
+      TweenLite.lagSmoothing(0);
+      var tl = new TimelineMax({ repeat: 5, repeatDelay: 3});
+      tl.from("#schirm", 0.6, {autoAlpha: 1})
+        .from("#msg01", 0.2, {y: 100, opacity: 0}, '-=0.1')
+        .to("#msg01", 0.2, {y: -100, opacity: 0}, '+=1')
+        .from("#msg02", 0.2, {y: 100, opacity: 0}, '-=0.1')
+        .to("#msg02", 0.2, {y: -100, opacity: 0}, '+=1.3')
+        .from("#msg03", 0.2, {y: 100, opacity: 0}, '-=0.1')
+        .to("#msg03", 0.2, {y: -100, opacity: 0}, '+=1')
+         .from("#rect", 0.2, {y: 100}, '-=0.1')
+        .from("#logo", 0.2, {scale: 0.3, opacity: 0}, '+=0.1')
+        .from("#txt", 0.2, {x: -600, opacity: 0}, '-=-0.1')
+
+        
+        ;
+   });
+  </script>
+</head>
+<body>
+    <div class="container">
+      <div id="msg01" class="el">
+        <img src="msg01.png">
+      </div>
+      <div id="msg02" class="el">
+        <img src="msg02.png">
+      </div>
+      <div id="msg03" class="el">
+        <img src="msg03.png">
+      </div>
+      <div id="rect" class="el">
+      </div>
+      <div id="logo" class="el">
+        <img src="logo.png">
+      </div>
+      <div id="txt" class="el">
+        <img src="txt.png">
+      </div>
+      <div id="schirm"></div> 
+    </div>
+</body>
